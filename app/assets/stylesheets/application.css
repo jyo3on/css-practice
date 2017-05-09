@@ -1,0 +1,620 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* -------------------------------- 
+
+Global Styles
+
+-------------------------------- */
+
+body {
+  margin: 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+a, a:hover, a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1080px;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.text-center {
+  text-align: center;
+}
+
+
+
+/* -------------------------------- 
+
+Header
+
+-------------------------------- */
+
+/* 메뉴 icon */
+/* line 49, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu-trigger {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }
+  /* line 59, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu-trigger .menu-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    z-index: 10; }
+    /* line 75, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+    .menu-trigger .menu-icon::before, .menu-trigger .menu-icon::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      /* apply transition to transform property */
+      -webkit-transition: -webkit-transform .3s;
+      -moz-transition: -moz-transform .3s;
+      transition: transform .3s; }
+    /* line 95, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+    .menu-trigger .menu-icon::before {
+      content: ' ';
+      -webkit-transform: translateY(-6px) rotate(0deg);
+      -moz-transform: translateY(-6px) rotate(0deg);
+      -ms-transform: translateY(-6px) rotate(0deg);
+      -o-transform: translateY(-6px) rotate(0deg);
+      transform: translateY(-6px) rotate(0deg); }
+    /* line 102, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+    .menu-trigger .menu-icon::after {
+      content: ' ';
+      -webkit-transform: translateY(6px) rotate(0deg);
+      -moz-transform: translateY(6px) rotate(0deg);
+      -ms-transform: translateY(6px) rotate(0deg);
+      -o-transform: translateY(6px) rotate(0deg);
+      transform: translateY(6px) rotate(0deg); }
+
+/* 메뉴 icon 닫혔을 때 */
+/* line 114, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu-trigger.close-nav .menu-icon {
+  /* 가운데 줄 안 보이게 */
+  background-color: rgba(255, 255, 255, 0); }
+  /* line 117, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu-trigger.close-nav .menu-icon::before, .menu-trigger.close-nav .menu-icon::after {
+    /* 하얗게 */
+    background-color: #fff; }
+  /* line 121, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu-trigger.close-nav .menu-icon::before {
+    -webkit-transform: translateY(0) rotate(45deg);
+    -moz-transform: translateY(0) rotate(45deg);
+    -ms-transform: translateY(0) rotate(45deg);
+    -o-transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(45deg); }
+  /* line 128, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu-trigger.close-nav .menu-icon::after {
+    -webkit-transform: translateY(0) rotate(-45deg);
+    -moz-transform: translateY(0) rotate(-45deg);
+    -ms-transform: translateY(0) rotate(-45deg);
+    -o-transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg); }
+
+/* 메뉴 내용 */
+/* line 139, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 80px 5%;
+  z-index: 3;
+  background-color: #ffbbbb;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
+  transition: visibility 0s, opacity 0.3s; }
+  /* line 155, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu li {
+    margin: 1.6em 0;
+    text-align: center;
+    text-transform: capitalize;
+    list-style: none; }
+    /* line 160, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+    .menu li a {
+      position: relative;
+      color: #fff; }
+
+/* line 166, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #fff;
+  opacity: 1;
+  -webkit-transition: visibility .3s, opacity .3s;
+  -moz-transition: visibility .3s, opacity .3s;
+  transition: visibility .3s, opacity .3s; }
+
+/* line 179, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu a.active::after, .menu a:hover:after {
+  visibility: hidden;
+  opacity: 0; }
+
+/* fade in */
+/* line 186, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.menu.fade-in {
+  visibility: visible;
+  opacity: 1; }
+
+/* responsive */
+@media only screen and (min-width: 768px) {
+  /* line 194, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu li {
+    margin: 2em 0; }
+  /* line 197, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu a {
+    font-size: 28px;
+    font-size: 1.75rem; } }
+
+@media only screen and (min-width: 1170px) {
+  /* line 203, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu li {
+    margin: 2.6em 0; }
+  /* line 206, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+  .menu a {
+    font-size: 32px;
+    font-size: 2rem; } }
+
+/* overlay */
+/* line 214, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-menu, .overlay-content {
+  position: fixed;
+  top: 18px;
+  left: 5%;
+  height: 4px;
+  width: 4px;
+  -webkit-transform: translateX(-20px) translateY(20px);
+  -moz-transform: translateX(-20px) translateY(20px);
+  -ms-transform: translateX(-20px) translateY(20px);
+  -o-transform: translateX(-20px) translateY(20px);
+  transform: translateX(-20px) translateY(20px); }
+
+/* line 226, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-menu span, .overlay-content span {
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0); }
+
+/* line 250, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-menu.is-hidden, .overlay-content.is-hidden {
+  /* background fades out at the end of the animation */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s; }
+
+/* line 259, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-menu {
+  /* main rounded colored bg 1 */
+  z-index: 2; }
+
+/* line 263, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-menu span {
+  background-color: #ffbbbb; }
+
+/* line 267, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-content {
+  /* main rounded colored bg 2 */
+  z-index: 4; }
+
+/* line 271, /Users/HOME/Desktop/dev/frontend-seminar/app/assets/stylesheets/home.scss */
+.overlay-content span {
+  background-color: #fff; }
+
+/* animation */
+
+/*# sourceMappingURL=home.css.map */
+
+/* grid system */
+
+.mobile-12 {
+  width: 100%;
+}
+.mobile-11 {
+  width: 91.66666667%;
+}
+.mobile-10 {
+  width: 83.33333333%;
+}
+.mobile-9 {
+  width: 75%;
+}
+.mobile-8 {
+  width: 66.66666667%;
+}
+.mobile-7 {
+  width: 58.33333333%;
+}
+.mobile-6 {
+  width: 50%;
+}
+.mobile-5 {
+  width: 41.66666667%;
+}
+.mobile-4 {
+  width: 33.33333333%;
+}
+.mobile-3 {
+  width: 25%;
+}
+.mobile-2 {
+  width: 16.66666667%;
+}
+.mobile-1 {
+  width: 8.33333333%;
+}
+.mobile-pull-12 {
+  right: 100%;
+}
+.mobile-pull-11 {
+  right: 91.66666667%;
+}
+.mobile-pull-10 {
+  right: 83.33333333%;
+}
+.mobile-pull-9 {
+  right: 75%;
+}
+.mobile-pull-8 {
+  right: 66.66666667%;
+}
+.mobile-pull-7 {
+  right: 58.33333333%;
+}
+.mobile-pull-6 {
+  right: 50%;
+}
+.mobile-pull-5 {
+  right: 41.66666667%;
+}
+.mobile-pull-4 {
+  right: 33.33333333%;
+}
+.mobile-pull-3 {
+  right: 25%;
+}
+.mobile-pull-2 {
+  right: 16.66666667%;
+}
+.mobile-pull-1 {
+  right: 8.33333333%;
+}
+.mobile-pull-0 {
+  right: auto;
+}
+.mobile-push-12 {
+  left: 100%;
+}
+.mobile-push-11 {
+  left: 91.66666667%;
+}
+.mobile-push-10 {
+  left: 83.33333333%;
+}
+.mobile-push-9 {
+  left: 75%;
+}
+.mobile-push-8 {
+  left: 66.66666667%;
+}
+.mobile-push-7 {
+  left: 58.33333333%;
+}
+.mobile-push-6 {
+  left: 50%;
+}
+.mobile-push-5 {
+  left: 41.66666667%;
+}
+.mobile-push-4 {
+  left: 33.33333333%;
+}
+.mobile-push-3 {
+  left: 25%;
+}
+.mobile-push-2 {
+  left: 16.66666667%;
+}
+.mobile-push-1 {
+  left: 8.33333333%;
+}
+.mobile-push-0 {
+  left: auto;
+}
+.mobile-offset-12 {
+  margin-left: 100%;
+}
+.mobile-offset-11 {
+  margin-left: 91.66666667%;
+}
+.mobile-offset-10 {
+  margin-left: 83.33333333%;
+}
+.mobile-offset-9 {
+  margin-left: 75%;
+}
+.mobile-offset-8 {
+  margin-left: 66.66666667%;
+}
+.mobile-offset-7 {
+  margin-left: 58.33333333%;
+}
+.mobile-offset-6 {
+  margin-left: 50%;
+}
+.mobile-offset-5 {
+  margin-left: 41.66666667%;
+}
+.mobile-offset-4 {
+  margin-left: 33.33333333%;
+}
+.mobile-offset-3 {
+  margin-left: 25%;
+}
+.mobile-offset-2 {
+  margin-left: 16.66666667%;
+}
+.mobile-offset-1 {
+  margin-left: 8.33333333%;
+}
+.mobile-offset-0 {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .desktop-12 {
+    width: 100%;
+  }
+  .desktop-11 {
+    width: 91.66666667%;
+  }
+  .desktop-10 {
+    width: 83.33333333%;
+  }
+  .desktop-9 {
+    width: 75%;
+  }
+  .desktop-8 {
+    width: 66.66666667%;
+  }
+  .desktop-7 {
+    width: 58.33333333%;
+  }
+  .desktop-6 {
+    width: 50%;
+  }
+  .desktop-5 {
+    width: 41.66666667%;
+  }
+  .desktop-4 {
+    width: 33.33333333%;
+  }
+  .desktop-3 {
+    width: 25%;
+  }
+  .desktop-2 {
+    width: 16.66666667%;
+  }
+  .desktop-1 {
+    width: 8.33333333%;
+  }
+  .desktop-pull-12 {
+    right: 100%;
+  }
+  .desktop-pull-11 {
+    right: 91.66666667%;
+  }
+  .desktop-pull-10 {
+    right: 83.33333333%;
+  }
+  .desktop-pull-9 {
+    right: 75%;
+  }
+  .desktop-pull-8 {
+    right: 66.66666667%;
+  }
+  .desktop-pull-7 {
+    right: 58.33333333%;
+  }
+  .desktop-pull-6 {
+    right: 50%;
+  }
+  .desktop-pull-5 {
+    right: 41.66666667%;
+  }
+  .desktop-pull-4 {
+    right: 33.33333333%;
+  }
+  .desktop-pull-3 {
+    right: 25%;
+  }
+  .desktop-pull-2 {
+    right: 16.66666667%;
+  }
+  .desktop-pull-1 {
+    right: 8.33333333%;
+  }
+  .desktop-pull-0 {
+    right: auto;
+  }
+  .desktop-push-12 {
+    left: 100%;
+  }
+  .desktop-push-11 {
+    left: 91.66666667%;
+  }
+  .desktop-push-10 {
+    left: 83.33333333%;
+  }
+  .desktop-push-9 {
+    left: 75%;
+  }
+  .desktop-push-8 {
+    left: 66.66666667%;
+  }
+  .desktop-push-7 {
+    left: 58.33333333%;
+  }
+  .desktop-push-6 {
+    left: 50%;
+  }
+  .desktop-push-5 {
+    left: 41.66666667%;
+  }
+  .desktop-push-4 {
+    left: 33.33333333%;
+  }
+  .desktop-push-3 {
+    left: 25%;
+  }
+  .desktop-push-2 {
+    left: 16.66666667%;
+  }
+  .desktop-push-1 {
+    left: 8.33333333%;
+  }
+  .desktop-push-0 {
+    left: auto;
+  }
+  .desktop-offset-12 {
+    margin-left: 100%;
+  }
+  .desktop-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .desktop-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .desktop-offset-9 {
+    margin-left: 75%;
+  }
+  .desktop-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .desktop-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .desktop-offset-6 {
+    margin-left: 50%;
+  }
+  .desktop-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .desktop-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .desktop-offset-3 {
+    margin-left: 25%;
+  }
+  .desktop-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .desktop-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .desktop-offset-0 {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,258 @@
+<header class="header">
+   <div class="container">
+      <!-- 메뉴 -->
+      <nav>   
+         <h2 class="sr-only">메뉴</h2>
+          <ul class="menu">
+           <li>
+             <form>
+               <div class="form-group">
+                 <input type="text" class="form-control" placeholder="학교 찾기">
+               </div>
+               <button type="submit" class="btn">검색</button>
+             </form> 
+            </li>
+            <li><a class="active">서울대학교<span class="sr-only">(현재 페이지)</span></a></li>
+            <li><a>연세대학교</a></li>
+            <li><a>고려대학교</a></li>
+            <li><a>서강대학교</a></li>
+            <li><a>한양대학교</a></li>
+          </ul>
+
+          <div class="overlay-menu">
+              <span></span>
+          </div>
+          <div class="overlay-content">
+              <span></span>
+          </div>
+
+          <a  class="menu-trigger">Menu<span class="menu-icon"></span></a>
+      </nav>
+      <!-- 로고 -->
+      <h1 class="logo">
+        <a>메모리라이언</a>
+      </h1>
+      <!-- 유저 -->
+      <div class="user">
+        <div class="user-icon"></div>
+      </div>
+    </div>
+</header>
+
+<!-- Position을 이용해봅시다 -->
+<section id="landing" class="hero">
+   <div class="container">
+    <div class="landing-text">
+      <p style="margin:0;">서울대학교</p>
+      <h2>언제나 흥이 폭발하는 <br>
+      스누라이언</h2>
+    </div>
+  </div>
+</section>  
+
+<!-- Float을 이용해봅시다 (Grid System) -->
+<section id="best" class="container">
+  <h4 class="heading">BEST MEMORY</h4>
+  <div class="best-img mobile-12 desktop-7">
+   <div class="on-img"></div>
+    <%= image_tag asset_path('img/best_memory@2x.png'), alt: "베스트사진" %>
+  </div>
+  <div class="best-text mobile-12 desktop-5 text-center">
+    <p>17년 4월 3일</p>
+    <h3>그날 사자는<br>꽃을 보지 못했다</h3>
+    <div class="profile">
+      <div class="user-icon"></div>
+      <span>&nbsp;hyunminLee</span>
+    </div>
+    <p>2017년 7번째 세미나를 마치고 모두 버들골에 모여
+     앉아 놀았다. 부.. 분명 벚꽃놀이였는데, 벚꽃은 어디로?
+     우리 정신줄은 어디로? 수건돌리기, 알봉닭봉,
+     노란통닭.</p>
+  </div>
+</section>
+
+<!-- Overflow와 Inline-block을 이용해봅시다 -->
+<section id="popular" class="container">
+  <h4 class="heading">POPULAR MEMORIES</h4>
+  <div class="popular-img-list">
+   <ul>
+      <li>
+        <div class="popular-img">
+         <div class="on-img"></div>
+          <%= image_tag asset_path('img/04_pop_memory@2x.png'), alt: "인기사진" %>
+        </div>
+        <small>17년 4월 3일</small>
+        <h4>너와 나 사이</h4>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+        <p>낙성대로 가는 길가에는 꽃이 활짝 폈더라 ^^ 덕분에 못한 꽃구경 원없이!</p>
+      </li>
+      <li>
+        <div class="popular-img">
+         <div class="on-img"></div>
+          <%= image_tag asset_path('img/05_pop_memory@2x.png'), alt: "인기사진" %>
+        </div>
+        <small>17년 4월 3일</small>
+        <h4>너와 나 사이</h4>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+        <p>낙성대로 가는 길가에는 꽃이 활짝 폈더라 ^^ 덕분에 못한 꽃구경 원없이!</p>
+      </li>
+      <li>
+        <div class="popular-img">
+         <div class="on-img"></div>
+          <%= image_tag asset_path('img/06_pop_memory@2x.png'), alt: "인기사진" %>
+        </div>
+        <small>17년 4월 3일</small>
+        <h4>너와 나 사이</h4>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+        <p>낙성대로 가는 길가에는 꽃이 활짝 폈더라 ^^ 덕분에 못한 꽃구경 원없이!</p>
+      </li>
+      <li>
+        <div class="popular-img">
+         <div class="on-img"></div>
+          <%= image_tag asset_path('img/07_pop_memory@2x.png'), alt: "인기사진" %>
+        </div>
+        <small>17년 4월 3일</small>
+        <h4>너와 나 사이</h4>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+        <p>낙성대로 가는 길가에는 꽃이 활짝 폈더라 ^^ 덕분에 못한 꽃구경 원없이!</p>
+      </li>
+      <li>
+        <div class="popular-img">
+         <div class="on-img"></div>
+          <%= image_tag asset_path('img/08_pop_memory@2x.png'), alt: "인기사진" %>
+        </div>
+        <small>17년 4월 3일</small>
+        <h4>너와 나 사이</h4>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+        <p>낙성대로 가는 길가에는 꽃이 활짝 폈더라 ^^ 덕분에 못한 꽃구경 원없이!</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Flex를 이용해봅시다 -->
+<section id="all" class="container">
+  <h4 class="heading">ALL MEMORIES</h4>
+  <div class="all-img-list">
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img">
+      </div>
+      <%= image_tag asset_path('img/09_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/10_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/11_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/12_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/13_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/14_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/15_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/16_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+        <p>이태리 상회에서 폭풍 흡입</p>
+        <div class="profile">
+          <div class="user-icon"></div>
+          <span>&nbsp;hyunminLee</span>
+        </div>
+      </div>
+      <div class="on-img"></div>
+      <%= image_tag asset_path('img/17_all_memory@2x.png'), alt: "모든 사진"  %>
+    </div>
+    <div class="all-img">
+      <div class="all-img-text">
+      <div class="on-img"></div>
+      </div>
+    </div>
+  </div>
+</section>
