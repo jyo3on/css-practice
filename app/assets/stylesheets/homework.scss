@@ -204,6 +204,7 @@ header
     margin-bottom: 14px;
     .all-img-text {
       z-index: 1;
+      pointer-events: none;
       position: absolute;
       display: flex;
       justify-content: center;
