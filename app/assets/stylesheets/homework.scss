@@ -203,6 +203,7 @@ header
     width: 200px;
     margin-bottom: 14px;
     .all-img-text {
+      z-index: 1;
       position: absolute;
       display: flex;
       justify-content: center;
