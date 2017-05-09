@@ -3,32 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*---------------------------
-
 기본적인 세팅
-
 ----------------------------*/
 
 *, *::after, *::before {
-  // 전체 선택자로 box-sizing을 설정해봅시다 ^-^
+ -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-  // 제플린을 참고해서 typography를 설정해봅시다 ^-^
-  // font-weight : 여러 개를 나열해놓아야 하나가 로딩이 안되어도 다른 폰트가 일단 뜬다. 
-  // font-size : 1rem에 해당될 수치
-  // font-weight, line-height, color : 전체적으로 많이 사용되고 있는 값을 부여
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.88;
+  font-family: "NanumGothic", "Malgun Gothic", "AppleSDGothicNeo", sans-serif;
+  color: #000;
 }
 .sr-only {
-  // screen에 보이지는 않지만, screen reader가 읽어줄 내용을 font-size: 0;과 display:none; 중 뭘로 해야할까요? ^0^
-}
-section {
-  // section마다 하단 여백과 선이 있습니다 ^-^
-}
-section::after {
-  // 부모에게 집나간 자식이 왼쪽에 붕 떠 있다는 걸 clearfix로 알려주자! (float를 사용한 곳에만 쓰면 됨.)
+    font-size: 0;
 }
 .heading {
-  // section마다 제목이 있습니다 
+  font-size: 1.375em;
+  margin-bottom: 15px;
 }
+
+section {
+  padding: 74px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+section::after {
+  // 부모에게 집나간 자식이 왼쪽에 붕 떠 있다는 걸 clearfix로 알려주자!
+  content: ' ';
+  display: block;
+  clear: left;
+}
+
 .mobile-1, .desktop-1, .mobile-2, .desktop-2, .mobile-3, .desktop-3, .mobile-4, .desktop-4, .mobile-5, .desktop-5, .mobile-6, .desktop-6, .mobile-7, .desktop-7, .mobile-8, .desktop-8, .mobile-9, .desktop-9, .mobile-10, .desktop-10, .mobile-11, .desktop-11, .mobile-12, .desktop-12 {
   // float를 이용한 grid system 만들어놓았습니다 - bootstrap3과 같은 방식 (offset, pull, push 등)
   // mobile 과 desktop 두 개만 만듦 - bootstrap3의 col-xs-가 mobile-, col-sm-이 desktop- 입니다 ^-^
@@ -37,26 +45,19 @@ section::after {
   min-height: 1px;
 }
 
-/* mobile 세팅 */
-
-@media (max-width: 768px) {
-  html {
-    // mobile의 1rem 새로 세팅
-  }
-  .heading {
-    // mobile의 heading은 가운데정렬
-  }
-  // 그외 필요한 것 추가하세요
-}
 
 /*---------------------------
-
 header 
-
 ----------------------------*/
 
 .header {
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100vw;
+  z-index: 999;
+  background-color: rgba(256,256,256,0.3);
 }
 
 /* menu */
@@ -66,39 +67,153 @@ header
 
 /* logo */
 .logo {
+  width: 200px;
+  margin: 0 auto;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "NanumMyeongjo";
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000;
 }
 
 /* user */
 .user {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: 50px;
 }
 .user-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: cover;
 }
 .profile {
+  display: flex;
+  p {
+    
+  }
 }
 
 /* landing */
 .hero {
   // 가상선택자를 이용해서 백그라운드에만 opacity를 설정해봅시다 ^-^
   // background-attachment를 이용해서 parallax 효과를 줘봅시다 ^-^
+  height: 550px;
+  overflow: hidden;
+  &::before{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 550px;
+    background: url("/assets/img/bg-1@2x.jpg") no-repeat fixed center;
+    background-size: cover;
+    opacity: 0.7;
+  }
 }
 .landing-text {
+  position: absolute;
+  top: 300px;
+  font-family: "NanumMyeongjo";
   p {
     // 마진 겹침 현상의 대표적 예를 찾아봅시다 ^-^
+    margin: 0;
+    font-size: 1.25em;
+  }
+  h2 {
+    font-size: 2.5em;
+    line-height: 1.38;
   }
 }
 
 /* best */
 .best-img {
+  height: 350px;
+  overflow: hidden;
+  img {
+    height: 130%;
+  }
 }
 .best-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h3 {
+    color: #ffbaba;
+    font-size: 1.875em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .profile {
+    justify-content: center;
+  }
+  p {
+    padding: 0 16px;
+  }
 }
 
 /* popular */
 .popular-img-list { 
+  overflow: auto;
+  width: 100%;
+  ul {
+    width: 1320px;
+    padding: 0;
+    li {
+      display: inline-block;
+      width: 255px;
+      vertical-align: top;
+      padding-right: 15px;
+      p{
+        font-size: 0.875em;
+      }
+      h4 {
+        color: #ffbaba;
+        font-size: 1.375em;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /* all */
 .all-img-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .all-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-bottom: 14px;
+    .all-img-text {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
 
 
@@ -107,5 +222,7 @@ header
 
 @each $name in user, top, search {
   // 반복문으로 아이콘을 한꺼번에 처리해봅시다. 세 개 뿐이므로 스프라이트 안 했음. SCSS에서 변수 사용은 #{$name}으로 합니다.
-  
+  .#{$name}-icon {
+    background-image: url('/assets/icon/#{$name}.png');
+  }
 }
