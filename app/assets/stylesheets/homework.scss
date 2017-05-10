@@ -45,7 +45,6 @@ section::after {
   min-height: 1px;
 }
 
-
 /*---------------------------
 header 
 ----------------------------*/
@@ -200,7 +199,7 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 19%;
     margin-bottom: 14px;
     .all-img-text {
       z-index: 1;
@@ -218,13 +217,25 @@ header
   }
 }
 
-
-
 /* icon */
 
 @each $name in user, top, search {
   // 반복문으로 아이콘을 한꺼번에 처리해봅시다. 세 개 뿐이므로 스프라이트 안 했음. SCSS에서 변수 사용은 #{$name}으로 합니다.
   .#{$name}-icon {
     background-image: url('/assets/icon/#{$name}.png');
+  }
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .heading {
+    text-align: center;
+  }
+  .all-img-list .all-img {
+    width: 49%;
   }
 }
