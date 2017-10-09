@@ -1,6 +1,6 @@
-**MEMORY LION**
+##MEMORY LION
 
-* Memory Lion is ..
+* **Memory Lion is ..**
 
     A static mockup of a website containing some memories of LikeLion at SNU.
 
@@ -10,11 +10,11 @@
 
     서울대학교 멋쟁이사자처럼 5기 회원들이 CSS 위주로 웹 퍼블리싱을 연습할 수 있도록 만들어졌습니다.
 
-* How to check Memory Lion
+* **How to check Memory Lion**
 
     Do `git clone` and run the project by typing `rails s`
 
-* Thanks to..
+* **Thanks to..**
 
     Design by bongkim
 
