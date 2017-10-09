@@ -1,24 +1,21 @@
+**MEMORY LION**
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+* Memory Lion is ..
 
+A static mockup of a website containing some memories of LikeLion at SNU.
 
-Welcome to your Rails project on Cloud9 IDE!
+This project is created for SNULion members to practice their web publishing skills mainly using CSS.
 
-To get started, just do the following:
+메모리라이언은 서울대학교 멋쟁이사자처럼 동아리의 추억을 담은 정적인 웹 페이지로,
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://memory-jyo3on.c9users.io/).
+서울대학교 멋쟁이사자처럼 5기 회원들이 CSS 위주로 웹 퍼블리싱을 연습할 수 있도록 만들어졌습니다.
 
-Happy coding!
-The Cloud9 IDE team
+* How to check Memory Lion
 
+Do `git clone` and run the project by typing `rails s`
 
-## Support & Documentation
+* Thanks to..
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Design by bongkim
+
+Published by J.Yoon
